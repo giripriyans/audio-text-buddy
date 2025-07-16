@@ -43,7 +43,7 @@ const Login = () => {
       }}
     >
       <div className="absolute inset-0 bg-black/50"></div>
-      <div className="w-full max-w-sm relative z-10 text-center flex flex-col items-center justify-center"
+      <div className="w-full max-w-sm relative z-10 text-center flex flex-col items-center justify-center -mt-20"
            style={{ minHeight: '60vh' }}>
         <div className="flex justify-center mb-3">
           <Bot className="h-8 w-8 text-primary" />
