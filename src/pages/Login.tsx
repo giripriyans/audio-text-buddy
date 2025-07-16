@@ -53,8 +53,8 @@ const Login = () => {
         </p>
         
         <form onSubmit={handleSubmit} className="space-y-3">
-          <div className="space-y-1">
-            <Label htmlFor="email" className="text-white text-sm">Email</Label>
+          <div className="space-y-1 text-center">
+            <Label htmlFor="email" className="text-white text-sm block">Email</Label>
             <Input
               id="email"
               type="email"
@@ -62,11 +62,11 @@ const Login = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className="h-9"
+              className="h-9 text-center"
             />
           </div>
-          <div className="space-y-1">
-            <Label htmlFor="password" className="text-white text-sm">Password</Label>
+          <div className="space-y-1 text-center">
+            <Label htmlFor="password" className="text-white text-sm block">Password</Label>
             <Input
               id="password"
               type="password"
@@ -74,7 +74,7 @@ const Login = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
-              className="h-9"
+              className="h-9 text-center"
             />
           </div>
           <Button type="submit" className="w-full h-9" disabled={isLoading}>
