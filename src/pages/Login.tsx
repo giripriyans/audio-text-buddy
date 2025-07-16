@@ -43,18 +43,18 @@ const Login = () => {
       }}
     >
       <div className="absolute inset-0 bg-black/50"></div>
-      <div className="w-full max-w-md relative z-10 text-center">
-        <div className="flex justify-center mb-4">
-          <Bot className="h-12 w-12 text-primary" />
+      <div className="w-full max-w-sm relative z-10 text-center">
+        <div className="flex justify-center mb-3">
+          <Bot className="h-8 w-8 text-primary" />
         </div>
-        <h1 className="text-2xl font-bold text-white mb-2">Welcome Back</h1>
-        <p className="text-white/80 mb-8">
+        <h1 className="text-xl font-bold text-white mb-1">Welcome Back</h1>
+        <p className="text-sm text-white/80 mb-6">
           Sign in to continue your conversations
         </p>
         
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div className="space-y-2">
-            <Label htmlFor="email" className="text-white">Email</Label>
+        <form onSubmit={handleSubmit} className="space-y-3">
+          <div className="space-y-1">
+            <Label htmlFor="email" className="text-white text-sm">Email</Label>
             <Input
               id="email"
               type="email"
@@ -62,10 +62,11 @@ const Login = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
+              className="h-9"
             />
           </div>
-          <div className="space-y-2">
-            <Label htmlFor="password" className="text-white">Password</Label>
+          <div className="space-y-1">
+            <Label htmlFor="password" className="text-white text-sm">Password</Label>
             <Input
               id="password"
               type="password"
@@ -73,12 +74,13 @@ const Login = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
+              className="h-9"
             />
           </div>
-          <Button type="submit" className="w-full" disabled={isLoading}>
+          <Button type="submit" className="w-full h-9" disabled={isLoading}>
             {isLoading ? (
               <>
-                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                <Loader2 className="mr-2 h-3 w-3 animate-spin" />
                 Signing in...
               </>
             ) : (
@@ -86,8 +88,8 @@ const Login = () => {
             )}
           </Button>
         </form>
-        <div className="mt-6 text-center">
-          <p className="text-sm text-white/80">
+        <div className="mt-4 text-center">
+          <p className="text-xs text-white/80">
             Don't have an account?{' '}
             <Link to="/signup" className="text-primary hover:underline">
               Sign up
